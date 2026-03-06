@@ -1,0 +1,22 @@
+{
+  "name": "zoom-daily-agenda-app",
+  "version": "1.0.0",
+  "description": "Zoom App to show today's meeting agenda",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "tunnel": "npx localtunnel --port 3000"
+  },
+  "keywords": [
+    "zoom-app",
+    "agenda",
+    "schedule"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "localtunnel": "^2.0.2"
+  }
+}

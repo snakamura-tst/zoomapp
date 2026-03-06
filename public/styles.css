@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
+  background: #f6f7f9;
+  color: #1f2937;
+}
+
+.container {
+  max-width: 640px;
+  margin: 24px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(31, 41, 55, 0.08);
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 1.4rem;
+}
+
+.today {
+  margin: 0;
+  color: #4b5563;
+}
+
+.status {
+  margin: 16px 0;
+  color: #2563eb;
+}
+
+.agenda {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.agenda-item {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 12px;
+  align-items: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.time {
+  font-weight: 700;
+  color: #111827;
+}
+
+.topic {
+  margin: 0;
+  font-weight: 600;
+}
+
+.owner {
+  margin: 2px 0 0;
+  color: #6b7280;
+  font-size: 0.92rem;
+}
