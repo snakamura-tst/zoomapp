@@ -45,6 +45,10 @@ npm start
 
 Zoom App から読み込むには `https` URL が必要です。
 
+本番運用では次の URL を利用します。
+
+- `https://zoomapp-lime.vercel.app/`
+
 このプロジェクトでは次のどちらかを使います。
 
 ```bash
@@ -55,7 +59,7 @@ npx localtunnel --port 3000
 ngrok http 3000
 ```
 
-発行された `https://...` を控えておきます。
+ローカル検証する場合は、発行された `https://...` を控えておきます。
 
 ### Step 3: Zoom App Marketplace でアプリ作成
 
@@ -65,8 +69,8 @@ ngrok http 3000
 
 ### Step 4: URL 設定
 
-1. App URL / Home URL に Step 2 の `https://...` を設定
-2. Domain Allow List にそのドメインを追加
+1. App URL / Home URL に `https://zoomapp-lime.vercel.app/` を設定
+2. Domain Allow List に `zoomapp-lime.vercel.app` を追加（プロトコルやパスは不要）
 3. 保存
 
 ### Step 5: 配布を非公開にする

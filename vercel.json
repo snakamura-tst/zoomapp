@@ -1,25 +1,15 @@
 {
   "version": 2,
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        },
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' https://source.zoom.us; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'self' https://zoom.us https://*.zoom.us;"
-        }
-      ]
-    }
-  ],
   "routes": [
+    {
+      "src": "/(.*)",
+      "headers": {
+        "X-Content-Type-Options": "nosniff",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Content-Security-Policy": "default-src 'self'; script-src 'self' https://source.zoom.us; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https:; frame-ancestors 'self' https://zoom.us https://*.zoom.us;"
+      },
+      "continue": true
+    },
     {
       "src": "/api/(.*)",
       "dest": "/api/$1"
