@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zoom OAuth Callback</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: #f6f8fb;
+        color: #1f2937;
+      }
+      .wrap {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+      .card {
+        width: min(720px, 100%);
+        background: #ffffff;
+        border: 1px solid #e5e7eb;
+        border-radius: 14px;
+        padding: 24px;
+      }
+      code {
+        display: block;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 8px;
+        background: #f3f4f6;
+        overflow-wrap: anywhere;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="card">
+        <h1>OAuth callback received</h1>
+        <p>Zoom からのリダイレクトを受信しました。</p>
+        <code id="query">query: (none)</code>
+      </section>
+    </main>
+    <script>
+      const query = window.location.search || "(none)";
+      document.getElementById("query").textContent = `query: ${query}`;
+    </script>
+  </body>
+</html>

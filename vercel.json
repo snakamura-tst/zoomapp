@@ -20,7 +20,7 @@
     },
     {
       "src": "/oauth/callback",
-      "dest": "/public/oauth-callback.html"
+      "dest": "/public/oauth/callback/index.html"
     },
     {
       "src": "/(.*)",
