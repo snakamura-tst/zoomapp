@@ -19,6 +19,10 @@
       "dest": "/public/index.html"
     },
     {
+      "src": "/oauth/callback",
+      "dest": "/public/oauth-callback.html"
+    },
+    {
       "src": "/(.*)",
       "dest": "/public/$1"
     }
